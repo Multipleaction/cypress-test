@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-15T12:34:03.880Z",
+    "end": "2023-10-15T12:34:14.388Z",
+    "duration": 10508,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f6b39564-7d4e-4ec1-ad43-30ee3ae8fdb0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\page-object-tests\\register-page-tests.cy.js",
+      "file": "cypress\\e2e\\page-object-tests\\register-page-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9b3e93b6-f41c-4d96-bee2-1d3e773e18bf",
+          "title": "Authentication Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register successfully",
+              "fullTitle": "Authentication Tests should register successfully",
+              "timedOut": null,
+              "duration": 6010,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AuthPage.default.enterFullName('Dmytro');\n_AuthPage.default.enterEmail('email@example.com');\n_AuthPage.default.enterPassword('password');\n_AuthPage.default.enterRepeatPassword('password');\n_AuthPage.default.checkAgreeWithTerms();\n_AuthPage.default.clickLoginButton();\n_AuthPage.default.checkAvatarVisibility();",
+              "err": {},
+              "uuid": "58d99738-1076-40b4-a7a1-0d5a053ec740",
+              "parentUUID": "9b3e93b6-f41c-4d96-bee2-1d3e773e18bf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should validate all fields with invalid data",
+              "fullTitle": "Authentication Tests should validate all fields with invalid data",
+              "timedOut": null,
+              "duration": 1666,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AuthPage.default.enterFullName('D');\n// Check if validation error messages are visible\ncy.contains('Full name should contains from 4 to 50 characters').should('be.visible');\n_AuthPage.default.enterEmail('q');\n_AuthPage.default.enterPassword('1');\ncy.get('#title').click(); // Just click somwhere to show password validation message\n// Check if validation error messages are visible\ncy.contains('Email should be the real one!').should('be.visible');\ncy.contains('Password should contain from 4 to 50 characters').should('be.visible');\n_AuthPage.default.enterRepeatPassword('123456789');\n// Check if border is red (Можна для кожної рамки таке напихати, але суть та сама)\ncy.get('#input-re-password').should('have.class', 'status-danger');",
+              "err": {},
+              "uuid": "94a97934-bed5-45a6-89b7-964e60290fb8",
+              "parentUUID": "9b3e93b6-f41c-4d96-bee2-1d3e773e18bf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should validate empty email, password, and repeat password fields",
+              "fullTitle": "Authentication Tests should validate empty email, password, and repeat password fields",
+              "timedOut": null,
+              "duration": 1047,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AuthPage.default.emptyEmailInput();\n_AuthPage.default.emptyPasswordInput();\n_AuthPage.default.emptyRepeatPasswordInput();\ncy.get('#title').click(); // Just click somewhere to show validation messages\ncy.contains('Email is required!').should('be.visible');\ncy.contains('Password is required!').should('be.visible');\ncy.contains('Password confirmation is required!').should('be.visible');",
+              "err": {},
+              "uuid": "8edf809d-9aa1-4d77-8fa9-304687661b13",
+              "parentUUID": "9b3e93b6-f41c-4d96-bee2-1d3e773e18bf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should disable the Register button without agreement",
+              "fullTitle": "Authentication Tests should disable the Register button without agreement",
+              "timedOut": null,
+              "duration": 1672,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AuthPage.default.enterFullName('Dmytro');\n_AuthPage.default.enterEmail('email@example.com');\n_AuthPage.default.enterPassword('password');\n_AuthPage.default.enterRepeatPassword('password');\n_AuthPage.default.checkLoginButtonDisabled();",
+              "err": {},
+              "uuid": "bac6ed64-0ff8-4ab3-b7bb-945614ed5a65",
+              "parentUUID": "9b3e93b6-f41c-4d96-bee2-1d3e773e18bf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "58d99738-1076-40b4-a7a1-0d5a053ec740",
+            "94a97934-bed5-45a6-89b7-964e60290fb8",
+            "8edf809d-9aa1-4d77-8fa9-304687661b13",
+            "bac6ed64-0ff8-4ab3-b7bb-945614ed5a65"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10395,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
