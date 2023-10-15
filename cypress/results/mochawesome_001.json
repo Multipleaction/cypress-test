@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-15T12:33:38.364Z",
-    "end": "2023-10-15T12:33:42.952Z",
-    "duration": 4588,
+    "start": "2023-10-15T13:21:51.296Z",
+    "end": "2023-10-15T13:21:55.797Z",
+    "duration": 4501,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "abebd0ad-b4ea-41e3-a5ff-41af9df2c0c4",
+      "uuid": "74b8dfe5-371e-43e7-8d94-c73360a6e094",
       "title": "",
       "fullFile": "cypress\\e2e\\spec.cy.ts",
       "file": "cypress\\e2e\\spec.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "53a667f2-7006-49e5-aac8-2f620f3ffe98",
+          "uuid": "ba462d63-f8d0-4ebd-b98f-e69569f033bb",
           "title": "Open tabs",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should open Layout -> Accordion",
               "fullTitle": "Open tabs Should open Layout -> Accordion",
               "timedOut": null,
-              "duration": 1770,
+              "duration": 1733,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.contains(\"span.menu-title\", \"Layout\").click();\ncy.contains(\"span.menu-title\", \"Accordion\").click();",
               "err": {},
-              "uuid": "95a5993d-c297-4e9f-b8e2-b621c7b937e7",
-              "parentUUID": "53a667f2-7006-49e5-aac8-2f620f3ffe98",
+              "uuid": "a6e6493e-d03d-47fe-bd15-97503c525c35",
+              "parentUUID": "ba462d63-f8d0-4ebd-b98f-e69569f033bb",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Should open Forms -> Form Layouts",
               "fullTitle": "Open tabs Should open Forms -> Form Layouts",
               "timedOut": null,
-              "duration": 1017,
+              "duration": 1002,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.contains(\"span.menu-title\", \"Forms\").click();\ncy.contains(\"span.menu-title\", \"Form Layouts\").click();",
               "err": {},
-              "uuid": "b3eb15f9-021f-415a-b114-f18e7999fc82",
-              "parentUUID": "53a667f2-7006-49e5-aac8-2f620f3ffe98",
+              "uuid": "3842a61f-13a1-4f96-99fe-28570c4de40e",
+              "parentUUID": "ba462d63-f8d0-4ebd-b98f-e69569f033bb",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Should show popover",
               "fullTitle": "Open tabs Should show popover",
               "timedOut": null,
-              "duration": 1680,
+              "duration": 1677,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.contains(\"span.menu-title\", \"Modal & Overlays\").click();\ncy.contains(\"span.menu-title\", \"Popover\").click();\ncy.contains(\"Bottom\").trigger(\"mouseenter\");\ncy.contains(\".primitive-overlay\", \"Hello, how are you today?\").should(\"be.visible\");",
               "err": {},
-              "uuid": "f26a3c9d-316d-4750-ab0f-b026aa237a8c",
-              "parentUUID": "53a667f2-7006-49e5-aac8-2f620f3ffe98",
+              "uuid": "b4f19985-70b4-4dfd-b982-802e6867fbed",
+              "parentUUID": "ba462d63-f8d0-4ebd-b98f-e69569f033bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "95a5993d-c297-4e9f-b8e2-b621c7b937e7",
-            "b3eb15f9-021f-415a-b114-f18e7999fc82",
-            "f26a3c9d-316d-4750-ab0f-b026aa237a8c"
+            "a6e6493e-d03d-47fe-bd15-97503c525c35",
+            "3842a61f-13a1-4f96-99fe-28570c4de40e",
+            "b4f19985-70b4-4dfd-b982-802e6867fbed"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4467,
+          "duration": 4412,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
