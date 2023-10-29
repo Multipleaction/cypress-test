@@ -39,3 +39,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ignore the mochawesome-report folder and its contents
+mochawesome-report/
+
+# Ignore the mochawesome.json file
+mochawesome.json
