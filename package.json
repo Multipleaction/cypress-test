@@ -31,7 +31,7 @@
 		"release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
 		"test:headless": "npx cypress run --browser chrome",
 		"generate:json-report": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
-		"clean:report": "del /q /s cypress\\results\\*.* 2>NUL && del /q mochawesome.json 2>NUL && del /q mochawesome-report\\mochawesome.html 2>NUL && for /d %i in (mochawesome-report\\*) do @rmdir /s /q %i",
+		"clean:report": "rimraf cypress/results/* mochawesome.json mochawesome-report/*",
 		"start-test": "npm run clean:report && start-server-and-test start http-get://localhost:4200/ test:headless && npm run generate:json-report"
 	},
 	"dependencies": {
@@ -103,7 +103,7 @@
 		"mochawesome-merge": "^4.3.0",
 		"mochawesome-report-generator": "^6.2.0",
 		"npm-run-all": "4.0.2",
-		"rimraf": "2.6.1",
+		"rimraf": "^2.6.1",
 		"run-script-os": "^1.1.6",
 		"start-server-and-test": "^2.0.1",
 		"stylelint": "7.13.0",
