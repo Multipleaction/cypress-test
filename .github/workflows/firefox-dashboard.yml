@@ -1,4 +1,4 @@
-name: My Test Workflow
+name: Firefox & dasboard Workflow
 on:
   workflow_dispatch:
   # push:
