@@ -16,7 +16,7 @@ jobs:
   testing1:
     runs-on: ubuntu-latest
     container:
-    image: node16.18.0-chrome107-ff106-edge
+    image: node16.18.0-chrome107.0.5304.68-ff106.0.1-edge
     steps:
       - name: Add env vars
         run: export RECORD_KEY=${{env.RECORD_KEY}}
