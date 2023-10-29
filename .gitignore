@@ -44,7 +44,7 @@ Thumbs.db
 mochawesome-report/
 
 # Ignore the results folder and its contents
-cypress/results/
+cypress/results/*
 
 # Ignore the mochawesome.json file
 mochawesome.json
