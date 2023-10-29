@@ -29,11 +29,13 @@
 		"docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
 		"prepush": "npm run lint:ci",
 		"release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
-		"test:headless": "npx cypress run --browser chrome",
-		"generate:json-report": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
-		"clean:report": "rimraf cypress/results/* mochawesome.json mochawesome-report/*",
-		"start-test": "npm run clean:report && start-server-and-test start http-get://localhost:4200/ test:headless && npm run generate:json-report",
-		"run-test": "start-server-and-test start http-get://localhost:4200/ test:headless"
+		"cypress:run": "npm run prereport && npx cypress run --spec cypress/e2e/ci/** --browser chrome",
+		"generate:report": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
+		"cypress:e2e": "start-test start http-get://localhost:4200/ cypress:run",
+		"delete:reports": "rimraf cypress/results/* || true",
+		"delete:merged": "rimraf mochawesome.json || true",
+		"delete:html": "rimraf mochawesome-report || true",
+		"prereport": "npm run delete:reports && npm run delete:merged && npm run delete:html"
 	},
 	"dependencies": {
 		"@agm/core": "^1.1.0",
