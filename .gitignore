@@ -40,11 +40,11 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Ignore the mochawesome-report folder and its contents
-mochawesome-report/
-
-# Ignore the results folder and its contents
-cypress/results/*
-
+# Reports ignores
+/cypress/downloads
+/cypress/screenshots
+/cypress/results
+/mochawesome-report
+mochawesome.json
 # Ignore the mochawesome.json file
 mochawesome.json
