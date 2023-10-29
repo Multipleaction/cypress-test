@@ -36,7 +36,7 @@
 		"delete:merged": "rimraf mochawesome.json || true",
 		"delete:html": "rimraf mochawesome-report || true",
 		"prereport": "npm run delete:reports && npm run delete:merged && npm run delete:html",
-		"cypress:run:firefox:dashboard": "npm run prereport && npx cypress run --spec cypress/e2e/** --browser firefox --record --key $RECORD_KEY",
+		"cypress:run:firefox:dashboard": "npm run prereport && npx cypress run --spec cypress/e2e/** --browser firefox --record --key $RECORD_KEY --parallel",
 		"cypress:e2e:firefox:dashboard": "start-test start http-get://localhost:4200/ cypress:run:firefox:dashboard"
 	},
 	"dependencies": {
