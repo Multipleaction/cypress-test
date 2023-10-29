@@ -32,7 +32,8 @@
 		"test:headless": "npx cypress run --browser chrome",
 		"generate:json-report": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
 		"clean:report": "rimraf cypress/results/* mochawesome.json mochawesome-report/*",
-		"start-test": "npm run clean:report && start-server-and-test start http-get://localhost:4200/ test:headless && npm run generate:json-report"
+		"start-test": "npm run clean:report && start-server-and-test start http-get://localhost:4200/ test:headless && npm run generate:json-report",
+		"run-test": "start-server-and-test start http-get://localhost:4200/ test:headless"
 	},
 	"dependencies": {
 		"@agm/core": "^1.1.0",
