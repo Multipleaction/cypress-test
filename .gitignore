@@ -46,5 +46,3 @@ Thumbs.db
 /cypress/results
 /mochawesome-report
 mochawesome.json
-# Ignore the mochawesome.json file
-mochawesome.json
